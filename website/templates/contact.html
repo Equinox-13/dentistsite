@@ -82,6 +82,17 @@
     <!-- end header section -->
   </div>
 
+  {% if message_name %}
+  <br/><br/></br>
+  <center>
+    <h2>
+      Thank you {{ message_name }}!
+    </h2>
+    <p>We have received your email and will respond you shortly.....</p>
+  </center>
+  <br/><br/><br/>
+
+  {% else %}
   <!-- contact section -->
   <section class="contact_section layout_padding">
     <div class="container">
@@ -134,7 +145,7 @@
     </div>
   </section>
   <!-- end contact section -->
-
+  {% endif %}
   <!-- footer section -->
   <footer class="footer_section">
     <div class="container">
