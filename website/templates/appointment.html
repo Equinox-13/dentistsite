@@ -1,0 +1,46 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block meta_description %} Dento appointment {% endblock %}
+{% block title %} Appointment {% endblock %}
+{% block content %}
+
+<div>
+    <br/><br/><br/><br/>
+    <center>
+        <h3>Your appointment is scheduled. Please review your information</h3>
+        <table>
+            <tr>
+                <td><strong>Name:</strong></td>
+                <td>{{ appointment_name }}</td>
+            </tr>
+            <tr>
+                <td><strong>Phone:</strong></td>
+                <td>{{ appointment_phone }}</td>
+            </tr>
+            <tr>
+                <td><strong>Email:</strong></td>
+                <td>{{ appointment_email }}</td>
+            </tr>
+             <tr>
+                <td><strong>Address:</strong></td>
+                <td>{{ appointment_address }}</td>
+            </tr>
+             <tr>
+                <td><strong>Appointment Date:</strong></td>
+                <td>{{ appointment_date }}</td>
+            </tr>
+             <tr>
+                <td><strong>Time:</strong></td>
+                <td>{{ appointment_time }}</td>
+            </tr>
+             <tr>
+                <td><strong>Message:</strong></td>
+                <td>{{ appointment_message }}</td>
+            </tr>
+        </table>
+    </center>
+    <br/><br/><br/><br/>
+</div>
+
+{% endblock %}
+

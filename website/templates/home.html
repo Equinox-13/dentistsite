@@ -468,28 +468,29 @@
       <div class="row">
         <div class="col-md-6 ">
             <div class="form_container contact-form">
-              <form action="">
+              <form action="{% url 'appointment' %}" method="post">
+                {% csrf_token %}
                 <div class="form-row">
                     <div class="col-lg-6">
-                        <input type="text" class="form-control" placeholder="Your Name">
+                        <input type="text" name="appointment-name" class="form-control" placeholder="Your Name">
                     </div>
                     <div class="col-lg-6">
-                        <input type="text"  class="form-control" placeholder="Phone Number">
+                        <input type="text" name="appointment-phone" class="form-control" placeholder="Phone Number">
                    </div>
                     <div class="col-md-6">
-                        <input type="email" class="form-control" placeholder="Email">
+                        <input type="email" name="appointment-email" class="form-control" placeholder="Email">
                     </div>
                     <div class="col-md-6">
-                        <input type="text" class="form-control" placeholder="Address">
+                        <input type="text" name="appointment-address" class="form-control" placeholder="Address">
                     </div>
                     <div class="col-md-6">
-                        <input type="date" class="form-control" placeholder="Enter Date">
+                        <input type="date" name="appointment-date" class="form-control" placeholder="Enter Date">
                     </div>
                     <div class="col-md-6">
-                        <input type="time" class="form-control" placeholder="Enter Time">
+                        <input type="time" name="appointment-time" class="form-control" placeholder="Enter Time">
                     </div>
                     <div class="col-12">
-                        <textarea class="form-control" placeholder="Message"></textarea>
+                        <textarea  name="appointment-message" class="form-control" placeholder="Message"></textarea>
                     </div>
                     <div class="btn_box col-12 mt-5">
                     <button type="submit" class="btn btn-primary float-end">Book Appointment </button>
