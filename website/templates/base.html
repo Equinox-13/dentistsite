@@ -35,12 +35,9 @@
 
 </head>
 
-<body>
+<body class="sub_page">
 
   <div class="hero_area">
-    <div class="hero_bg_box">
-      <img src="{% static 'website/images/hero-bg.png' %}" alt="">
-    </div>
     <!-- header section strats -->
     <header class="header_section">
       <div class="container">
@@ -57,11 +54,11 @@
 
           <div class="collapse navbar-collapse" id="navbarSupportedContent">
             <ul class="navbar-nav">
-              <li class="nav-item active">
-                <a class="nav-link" href="{% url 'home' %}">Home <span class="sr-only">(current)</span></a>
-              </li>
               <li class="nav-item">
-                <a class="nav-link" href="{% url 'about' %}"> About</a>
+                <a class="nav-link" href="{% url 'home' %}">Home </a>
+              </li>
+              <li class="nav-item active">
+                <a class="nav-link" href="{% url 'about' %}"> About <span class="sr-only">(current)</span> </a>
               </li>
               <li class="nav-item">
                 <a class="nav-link" href="{% url 'departments' %}">Departments</a>
@@ -83,6 +80,7 @@
       </div>
     </header>
     <!-- end header section -->
+  </div>
 
 
 
